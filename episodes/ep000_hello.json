@@ -1,0 +1,14 @@
+{
+  "title": "Meet Grubb",
+  "description": "they voted me off the island. again. #grubb #stillhere #animation #fyp",
+  "fps": 24,
+  "voice": {"speaker": 20, "pitch": 1.35},
+  "lead_in": 0.5,
+  "beats": [
+    {"text": "Hi! I'm Grubb.", "expr": "happy", "action": "wave"},
+    {"text": "Everyone keeps voting me off the island.", "expr": "side", "action": "idle"},
+    {"text": "", "expr": "sad", "action": "shrug", "hold": 0.6},
+    {"text": "...still here.", "expr": "stillhere", "action": "arms_up", "hold": 1.0}
+  ],
+  "tail": 0.6
+}

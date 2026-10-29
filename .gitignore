@@ -1,0 +1,4 @@
+output/
+voices/
+__pycache__/
+.venv/
