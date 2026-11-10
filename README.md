@@ -12,6 +12,8 @@ episodes/            epizód-forgatókönyvek (JSON)
 vilag/grubb.md       világleírás – ezt olvassa Claude új rész előtt
 tortenet/naplo.md    eddigi epizódok
 .claude/commands/    /uj-epizod parancs Claude Code-hoz
+motion/              kódból renderelt motion design videók (WebGL2 + saját szintetizált zene), lásd motion/README.md
+renders/             kész, feltölthető videók
 ```
 
 ## Telepítés a laptopon (egyszer)

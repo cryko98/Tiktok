@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>4,000 Weeks</title>
+<style>
+  @font-face { font-family: 'IDisp'; src: url('../fonts/InterDisplay-Light.otf'); font-weight: 300; }
+  @font-face { font-family: 'IDisp'; src: url('../fonts/InterDisplay-Medium.otf'); font-weight: 500; }
+  @font-face { font-family: 'IDisp'; src: url('../fonts/InterDisplay-ExtraBold.otf'); font-weight: 800; }
+  @font-face { font-family: 'IDisp'; src: url('../fonts/InterDisplay-Black.otf'); font-weight: 900; }
+  @font-face { font-family: 'ISerif'; src: url('../fonts/InstrumentSerif-Regular.woff2'); font-style: normal; }
+  @font-face { font-family: 'ISerif'; src: url('../fonts/InstrumentSerif-Italic.woff2'); font-style: italic; }
+  @font-face { font-family: 'JBM'; src: url('../fonts/JetBrainsMono-Regular.ttf'); font-weight: 400; }
+  @font-face { font-family: 'JBM'; src: url('../fonts/JetBrainsMono-Medium.ttf'); font-weight: 500; }
+  html, body { margin: 0; background: #000; }
+  canvas { display: block; }
+  body.preview canvas { height: 100vh; width: auto; margin: 0 auto; }
+</style>
+</head>
+<body>
+<canvas id="gl" width="1080" height="1920"></canvas>
+<script src="timeline.js"></script>
+<script src="scene.js"></script>
+<script>
+  // Open with ?play to watch a (slow, software-rendered) real-time preview in a browser.
+  if (location.search.includes('play')) {
+    document.body.classList.add('preview');
+    SCENE.ready.then(() => {
+      const t0 = performance.now();
+      const loop = () => {
+        SCENE.render(((performance.now() - t0) / 1000) % TL.DURATION);
+        requestAnimationFrame(loop);
+      };
+      loop();
+    });
+  }
+</script>
+</body>
+</html>

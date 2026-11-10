@@ -1,0 +1,12 @@
+{
+  "name": "tiktok-motion",
+  "private": true,
+  "description": "Code-rendered motion design pieces (WebGL2 + synthesized sound) for TikTok",
+  "scripts": {
+    "build": "bash build.sh weeks4000",
+    "stills": "node render.js weeks4000 --stills 0.6,5.3,8.5,12,16,21.8,26.9,28.9,31.8"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}
