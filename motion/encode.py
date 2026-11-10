@@ -32,10 +32,10 @@ af = (f"loudnorm={target}:linear=true:measured_I={m['input_i']}:measured_TP={m['
 subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", wav, "-af", af, "-ar", "48000", norm], check=True)
 
 subprocess.run([
-    "ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-stats",
+    "ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
     "-framerate", str(args.fps), "-i", os.path.join(wd, "frames", "f_%05d.png"),
     "-i", norm,
-    "-c:v", "libx264", "-preset", "slow", "-crf", "16", "-tune", "film",
+    "-c:v", "libx264", "-preset", "slow", "-crf", "17", "-maxrate", "11M", "-bufsize", "22M", "-tune", "film",
     "-pix_fmt", "yuv420p", "-profile:v", "high", "-level", "4.2",
     "-x264-params", f"keyint={args.fps * 2}:min-keyint={args.fps}",
     "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709",

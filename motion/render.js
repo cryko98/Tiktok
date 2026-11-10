@@ -70,7 +70,7 @@ async function grab(page, t) {
     }
     await browser.close();
   } else if (opt('frames')) {
-    const workers = +opt('workers', 3);
+    const workers = +opt('workers', 1);
     const dir = path.join(OUT, 'frames');
     fs.mkdirSync(dir, { recursive: true });
     const probe = await openPage(port);

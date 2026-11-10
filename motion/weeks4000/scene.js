@@ -813,8 +813,8 @@
     { t0: 27.75, t1: 29.85, y: 1190, text: 'weeks that are really yours.', f: SERIF, s: 70, color: 'rgba(255,255,255,0.9)', in: 'rise', out: 'up' },
     { t0: 28.5, t1: 29.85, y: 1295, text: 'MAKE THEM COUNT.', f: SANS(900), s: 76, track: 2, color: ACC.gold, in: 'mask', out: 'up', glow: 'rgba(255,170,60,0.55)' },
 
-    { t0: 31.3, t1: 33.05, y: 790, text: 'THIS WEEK', f: SANS(900), s: 156, track: -2, in: 'mask', out: 'up' },
-    { t0: 31.75, t1: 33.05, y: 880, text: 'is one of them.', f: SERIF, s: 96, in: 'rise', out: 'up' },
+    { t0: 31.3, t1: 32.85, y: 790, text: 'THIS WEEK', f: SANS(900), s: 156, track: -2, in: 'mask', out: 'up' },
+    { t0: 31.75, t1: 32.85, y: 880, text: 'is one of them.', f: SERIF, s: 96, in: 'rise', out: 'up' },
   ];
   const layoutCache = new Map();
   function layout(s) {
